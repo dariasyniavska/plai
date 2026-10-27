@@ -1,0 +1,1502 @@
+{
+  "info": {
+    "_postman_id": "061ebb6c-5d18-49ce-8c41-2814834dbcf7",
+    "name": "Plai API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55862005",
+    "_collection_link": "https://go.postman.co/collection/55862005-061ebb6c-5d18-49ce-8c41-2814834dbcf7?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Mountain ranges",
+      "item": [
+        {
+          "name": "Create mountain range",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Чорногора\",\n  \"description\": \"Найвищий гірський масив Українських Карпат...\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/mountain-ranges/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "mountain-ranges",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create mountain range",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Чорногора\",\n  \"description\": \"Найвищий гірський масив Українських Карпат...\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/v1/mountain-ranges/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "mountain-ranges",
+                    ""
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:26:31 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, POST, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "136"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 5,\n  \"name\": \"Чорногора\",\n  \"description\": \"Найвищий гірський масив Українських Карпат...\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "List mountain ranges",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/mountain-ranges/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "mountain-ranges",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "List mountain ranges",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/v1/mountain-ranges/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "mountain-ranges",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:35:20 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, POST, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "412"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"id\": 3,\n    \"name\": \"Чорногора\",\n    \"description\": \"Найвищий гірський масив Українських Карпат...\"\n  },\n  {\n    \"id\": 4,\n    \"name\": \"Чорногора\",\n    \"description\": \"Найвищий гірський масив Українських Карпат...\"\n  },\n  {\n    \"id\": 5,\n    \"name\": \"Чорногора\",\n    \"description\": \"Найвищий гірський масив Українських Карпат...\"\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Get mountain range",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/mountain-ranges/3/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "mountain-ranges",
+                "3",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get mountain range",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/v1/mountain-ranges/3/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "mountain-ranges",
+                    "3",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:35:44 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "136"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 3,\n  \"name\": \"Чорногора\",\n  \"description\": \"Найвищий гірський масив Українських Карпат...\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update mountain range",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"description\": \"Новий опис масиву\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/mountain-ranges/3/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "mountain-ranges",
+                "3",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update mountain range",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"description\": \"Новий опис масиву\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/v1/mountain-ranges/3/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "mountain-ranges",
+                    "3",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:36:07 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "85"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 3,\n  \"name\": \"Чорногора\",\n  \"description\": \"Новий опис масиву\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete mountain range",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/mountain-ranges/3/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "mountain-ranges",
+                "3",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete mountain range",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/v1/mountain-ranges/3/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "mountain-ranges",
+                    "3",
+                    ""
+                  ]
+                }
+              },
+              "status": "Conflict",
+              "code": 409,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:47:50 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "143"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"error\": \"Неможливо видалити гірський масив, оскільки існують пов'язані маршрути\"\n}"
+            },
+            {
+              "name": "Delete mountain range",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/v1/mountain-ranges/3/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "mountain-ranges",
+                    "3",
+                    ""
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:49:15 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "List routes of mountain range",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/mountain-ranges/3/routes/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "mountain-ranges",
+                "3",
+                "routes",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "List routes of mountain range",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/v1/mountain-ranges/3/routes/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "mountain-ranges",
+                    "3",
+                    "routes",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:40:34 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "381"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"id\": 2,\n    \"name\": \"Говерла з Заросляка\",\n    \"description\": \"Класичний підйом на найвищу вершину України...\",\n    \"distance_km\": 12.5,\n    \"elevation_gain_m\": 1050,\n    \"difficulty\": \"medium\",\n    \"duration_type\": \"one_day\",\n    \"popularity\": 0,\n    \"mountain_range\": 3,\n    \"starting_point\": 1,\n    \"gear\": [\n      \"трекінгове взуття\",\n      \"дощовик\",\n      \"вода 1.5 л\"\n    ]\n  }\n]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Starting points",
+      "item": [
+        {
+          "name": "Create starting point",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Ворохта\",\n  \"description\": \"Селище в Івано-Франківській області, відправна точка багатьох маршрутів...\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/starting-points/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "starting-points",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create starting point",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Ворохта\",\n  \"description\": \"Селище в Івано-Франківській області, відправна точка багатьох маршрутів...\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/v1/starting-points/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "starting-points",
+                    ""
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:26:43 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, POST, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "185"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 3,\n  \"name\": \"Ворохта\",\n  \"description\": \"Селище в Івано-Франківській області, відправна точка багатьох маршрутів...\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "List starting points",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/starting-points/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "starting-points",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "List starting points",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/v1/starting-points/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "starting-points",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:40:51 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, POST, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "559"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"id\": 1,\n    \"name\": \"Ворохта\",\n    \"description\": \"Селище в Івано-Франківській області, відправна точка багатьох маршрутів...\"\n  },\n  {\n    \"id\": 2,\n    \"name\": \"Ворохта\",\n    \"description\": \"Селище в Івано-Франківській області, відправна точка багатьох маршрутів...\"\n  },\n  {\n    \"id\": 3,\n    \"name\": \"Ворохта\",\n    \"description\": \"Селище в Івано-Франківській області, відправна точка багатьох маршрутів...\"\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Get starting point",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/starting-points/3/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "starting-points",
+                "3",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get starting point",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/v1/starting-points/3/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "starting-points",
+                    "3",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:41:03 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "185"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 3,\n  \"name\": \"Ворохта\",\n  \"description\": \"Селище в Івано-Франківській області, відправна точка багатьох маршрутів...\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete starting point",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/starting-points/1/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "starting-points",
+                "1",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete starting point",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/v1/starting-points/1/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "starting-points",
+                    "1",
+                    ""
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:50:49 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Routes",
+      "item": [
+        {
+          "name": "Create route",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Говерла з Заросляка\",\n  \"description\": \"Класичний підйом на найвищу вершину України...\",\n  \"distance_km\": 12.5,\n  \"elevation_gain_m\": 1050,\n  \"difficulty\": \"medium\",\n  \"duration_type\": \"one_day\",\n  \"gear\": [\"трекінгове взуття\", \"дощовик\", \"вода 1.5 л\"],\n  \"mountain_range\": 3,\n  \"starting_point\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/routes/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "routes",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create route",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Говерла з Заросляка\",\n  \"description\": \"Класичний підйом на найвищу вершину України...\",\n  \"distance_km\": 12.5,\n  \"elevation_gain_m\": 1050,\n  \"difficulty\": \"medium\",\n  \"duration_type\": \"one_day\",\n  \"gear\": [\"трекінгове взуття\", \"дощовик\", \"вода 1.5 л\"],\n  \"mountain_range\": 3,\n  \"starting_point\": 1\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/v1/routes/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "routes",
+                    ""
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:31:30 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, POST, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "379"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 2,\n  \"name\": \"Говерла з Заросляка\",\n  \"description\": \"Класичний підйом на найвищу вершину України...\",\n  \"distance_km\": 12.5,\n  \"elevation_gain_m\": 1050,\n  \"difficulty\": \"medium\",\n  \"duration_type\": \"one_day\",\n  \"popularity\": 0,\n  \"mountain_range\": 3,\n  \"starting_point\": 1,\n  \"gear\": [\n    \"трекінгове взуття\",\n    \"дощовик\",\n    \"вода 1.5 л\"\n  ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "List routes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/routes/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "routes",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "List routes",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/v1/routes/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "routes",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:41:37 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, POST, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "381"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"id\": 2,\n    \"name\": \"Говерла з Заросляка\",\n    \"description\": \"Класичний підйом на найвищу вершину України...\",\n    \"distance_km\": 12.5,\n    \"elevation_gain_m\": 1050,\n    \"difficulty\": \"medium\",\n    \"duration_type\": \"one_day\",\n    \"popularity\": 0,\n    \"mountain_range\": 3,\n    \"starting_point\": 1,\n    \"gear\": [\n      \"трекінгове взуття\",\n      \"дощовик\",\n      \"вода 1.5 л\"\n    ]\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Get route",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/routes/2/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "routes",
+                "2",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get route",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/v1/routes/2/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "routes",
+                    "2",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:43:36 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "379"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 2,\n  \"name\": \"Говерла з Заросляка\",\n  \"description\": \"Класичний підйом на найвищу вершину України...\",\n  \"distance_km\": 12.5,\n  \"elevation_gain_m\": 1050,\n  \"difficulty\": \"medium\",\n  \"duration_type\": \"one_day\",\n  \"popularity\": 0,\n  \"mountain_range\": 3,\n  \"starting_point\": 1,\n  \"gear\": [\n    \"трекінгове взуття\",\n    \"дощовик\",\n    \"вода 1.5 л\"\n  ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update route",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"difficulty\": \"hard\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/routes/2/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "routes",
+                "2",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update route",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"difficulty\": \"hard\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/v1/routes/2/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "routes",
+                    "2",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:43:59 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "377"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 2,\n  \"name\": \"Говерла з Заросляка\",\n  \"description\": \"Класичний підйом на найвищу вершину України...\",\n  \"distance_km\": 12.5,\n  \"elevation_gain_m\": 1050,\n  \"difficulty\": \"hard\",\n  \"duration_type\": \"one_day\",\n  \"popularity\": 0,\n  \"mountain_range\": 3,\n  \"starting_point\": 1,\n  \"gear\": [\n    \"трекінгове взуття\",\n    \"дощовик\",\n    \"вода 1.5 л\"\n  ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete route",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/routes/2/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "routes",
+                "2",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete route",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/v1/routes/2/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "routes",
+                    "2",
+                    ""
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:48:25 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": ""
+    }
+  ]
+}
