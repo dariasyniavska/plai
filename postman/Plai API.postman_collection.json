@@ -1,0 +1,3120 @@
+{
+  "info": {
+    "_collection_link": "https://go.postman.co/collection/55862005-061ebb6c-5d18-49ce-8c41-2814834dbcf7?source=collection_link",
+    "_exporter_id": "55862005",
+    "_postman_id": "061ebb6c-5d18-49ce-8c41-2814834dbcf7",
+    "name": "Plai API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "item": [
+        {
+          "name": "Create mountain range",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{access_token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "   {\n     \"name\": \"Тест прав\",\n     \"description\": \"Перевірка прав\"\n   }"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "mountain-ranges",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/mountain-ranges/"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "json",
+              "body": "{\n  \"id\": 5,\n  \"name\": \"Чорногора\",\n  \"description\": \"Найвищий гірський масив Українських Карпат...\"\n}",
+              "code": 201,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:26:31 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, POST, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "136"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "Create mountain range",
+              "originalRequest": {
+                "body": {
+                  "mode": "raw",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  },
+                  "raw": "{\n  \"name\": \"Чорногора\",\n  \"description\": \"Найвищий гірський масив Українських Карпат...\"\n}"
+                },
+                "header": [],
+                "method": "POST",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "mountain-ranges",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/mountain-ranges/"
+                }
+              },
+              "status": "Created"
+            },
+            {
+              "_postman_previewlanguage": "json",
+              "body": "{\n  \"error\": \"Потрібна авторизація. Увійдіть в акаунт і передайте access токен у заголовку Authorization: Bearer <token>\"\n}",
+              "code": 401,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 08 Nov 2026 11:35:36 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "WWW-Authenticate",
+                  "value": "Bearer realm=\"api\""
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, POST, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "177"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "New create mountain range",
+              "originalRequest": {
+                "body": {
+                  "mode": "raw",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  },
+                  "raw": "   {\n     \"name\": \"Тест прав\",\n     \"description\": \"Перевірка прав\"\n   }"
+                },
+                "header": [],
+                "method": "POST",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "mountain-ranges",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/mountain-ranges/"
+                }
+              },
+              "status": "Unauthorized"
+            },
+            {
+              "_postman_previewlanguage": "json",
+              "body": "{\n  \"error\": \"Недостатньо прав для виконання цієї дії. Потрібні права адміністратора\"\n}",
+              "code": 403,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 08 Nov 2026 11:37:18 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, POST, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "143"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "Create m. r. need admin",
+              "originalRequest": {
+                "body": {
+                  "mode": "raw",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  },
+                  "raw": "   {\n     \"name\": \"Тест прав\",\n     \"description\": \"Перевірка прав\"\n   }"
+                },
+                "header": [],
+                "method": "POST",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "mountain-ranges",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/mountain-ranges/"
+                }
+              },
+              "status": "Forbidden"
+            }
+          ]
+        },
+        {
+          "name": "List mountain ranges",
+          "request": {
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "mountain-ranges",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/mountain-ranges/"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "json",
+              "body": "[\n  {\n    \"id\": 3,\n    \"name\": \"Чорногора\",\n    \"description\": \"Найвищий гірський масив Українських Карпат...\"\n  },\n  {\n    \"id\": 4,\n    \"name\": \"Чорногора\",\n    \"description\": \"Найвищий гірський масив Українських Карпат...\"\n  },\n  {\n    \"id\": 5,\n    \"name\": \"Чорногора\",\n    \"description\": \"Найвищий гірський масив Українських Карпат...\"\n  }\n]",
+              "code": 200,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:35:20 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, POST, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "412"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "List mountain ranges",
+              "originalRequest": {
+                "header": [],
+                "method": "GET",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "mountain-ranges",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/mountain-ranges/"
+                }
+              },
+              "status": "OK"
+            }
+          ]
+        },
+        {
+          "name": "Get mountain range",
+          "request": {
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "mountain-ranges",
+                "3",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/mountain-ranges/3/"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "json",
+              "body": "{\n  \"id\": 3,\n  \"name\": \"Чорногора\",\n  \"description\": \"Найвищий гірський масив Українських Карпат...\"\n}",
+              "code": 200,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:35:44 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "136"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "Get mountain range",
+              "originalRequest": {
+                "header": [],
+                "method": "GET",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "mountain-ranges",
+                    "3",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/mountain-ranges/3/"
+                }
+              },
+              "status": "OK"
+            }
+          ]
+        },
+        {
+          "name": "Update mountain range",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{access_token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\n  \"description\": \"Новий опис масиву\"\n}"
+            },
+            "header": [],
+            "method": "PATCH",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "mountain-ranges",
+                "3",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/mountain-ranges/3/"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "json",
+              "body": "{\n  \"id\": 3,\n  \"name\": \"Чорногора\",\n  \"description\": \"Новий опис масиву\"\n}",
+              "code": 200,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:36:07 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "85"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "Update mountain range",
+              "originalRequest": {
+                "body": {
+                  "mode": "raw",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  },
+                  "raw": "{\n  \"description\": \"Новий опис масиву\"\n}"
+                },
+                "header": [],
+                "method": "PATCH",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "mountain-ranges",
+                    "3",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/mountain-ranges/3/"
+                }
+              },
+              "status": "OK"
+            }
+          ]
+        },
+        {
+          "name": "Delete mountain range",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{access_token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [],
+            "method": "DELETE",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "mountain-ranges",
+                "3",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/mountain-ranges/3/"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "json",
+              "body": "{\n  \"error\": \"Неможливо видалити гірський масив, оскільки існують пов'язані маршрути\"\n}",
+              "code": 409,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:47:50 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "143"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "Delete mountain range",
+              "originalRequest": {
+                "header": [],
+                "method": "DELETE",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "mountain-ranges",
+                    "3",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/mountain-ranges/3/"
+                }
+              },
+              "status": "Conflict"
+            },
+            {
+              "_postman_previewlanguage": "text",
+              "body": "",
+              "code": 204,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:49:15 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "Delete mountain range",
+              "originalRequest": {
+                "header": [],
+                "method": "DELETE",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "mountain-ranges",
+                    "3",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/mountain-ranges/3/"
+                }
+              },
+              "status": "No Content"
+            }
+          ]
+        },
+        {
+          "name": "List routes of mountain range",
+          "request": {
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "mountain-ranges",
+                "3",
+                "routes",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/mountain-ranges/3/routes/"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "json",
+              "body": "[\n  {\n    \"id\": 2,\n    \"name\": \"Говерла з Заросляка\",\n    \"description\": \"Класичний підйом на найвищу вершину України...\",\n    \"distance_km\": 12.5,\n    \"elevation_gain_m\": 1050,\n    \"difficulty\": \"medium\",\n    \"duration_type\": \"one_day\",\n    \"popularity\": 0,\n    \"mountain_range\": 3,\n    \"starting_point\": 1,\n    \"gear\": [\n      \"трекінгове взуття\",\n      \"дощовик\",\n      \"вода 1.5 л\"\n    ]\n  }\n]",
+              "code": 200,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:40:34 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "381"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "List routes of mountain range",
+              "originalRequest": {
+                "header": [],
+                "method": "GET",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "mountain-ranges",
+                    "3",
+                    "routes",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/mountain-ranges/3/routes/"
+                }
+              },
+              "status": "OK"
+            }
+          ]
+        }
+      ],
+      "name": "Mountain ranges"
+    },
+    {
+      "item": [
+        {
+          "name": "Create starting point",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{access_token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\n  \"name\": \"Ворохта\",\n  \"description\": \"Селище в Івано-Франківській області, відправна точка багатьох маршрутів...\"\n}"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "starting-points",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/starting-points/"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "json",
+              "body": "{\n  \"id\": 3,\n  \"name\": \"Ворохта\",\n  \"description\": \"Селище в Івано-Франківській області, відправна точка багатьох маршрутів...\"\n}",
+              "code": 201,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:26:43 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, POST, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "185"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "Create starting point",
+              "originalRequest": {
+                "body": {
+                  "mode": "raw",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  },
+                  "raw": "{\n  \"name\": \"Ворохта\",\n  \"description\": \"Селище в Івано-Франківській області, відправна точка багатьох маршрутів...\"\n}"
+                },
+                "header": [],
+                "method": "POST",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "starting-points",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/starting-points/"
+                }
+              },
+              "status": "Created"
+            }
+          ]
+        },
+        {
+          "name": "List starting points",
+          "request": {
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "starting-points",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/starting-points/"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "json",
+              "body": "[\n  {\n    \"id\": 1,\n    \"name\": \"Ворохта\",\n    \"description\": \"Селище в Івано-Франківській області, відправна точка багатьох маршрутів...\"\n  },\n  {\n    \"id\": 2,\n    \"name\": \"Ворохта\",\n    \"description\": \"Селище в Івано-Франківській області, відправна точка багатьох маршрутів...\"\n  },\n  {\n    \"id\": 3,\n    \"name\": \"Ворохта\",\n    \"description\": \"Селище в Івано-Франківській області, відправна точка багатьох маршрутів...\"\n  }\n]",
+              "code": 200,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:40:51 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, POST, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "559"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "List starting points",
+              "originalRequest": {
+                "header": [],
+                "method": "GET",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "starting-points",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/starting-points/"
+                }
+              },
+              "status": "OK"
+            }
+          ]
+        },
+        {
+          "name": "Get starting point",
+          "request": {
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "starting-points",
+                "3",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/starting-points/3/"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "json",
+              "body": "{\n  \"id\": 3,\n  \"name\": \"Ворохта\",\n  \"description\": \"Селище в Івано-Франківській області, відправна точка багатьох маршрутів...\"\n}",
+              "code": 200,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:41:03 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "185"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "Get starting point",
+              "originalRequest": {
+                "header": [],
+                "method": "GET",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "starting-points",
+                    "3",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/starting-points/3/"
+                }
+              },
+              "status": "OK"
+            }
+          ]
+        },
+        {
+          "name": "Delete starting point",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{access_token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [],
+            "method": "DELETE",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "starting-points",
+                "1",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/starting-points/1/"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "text",
+              "body": "",
+              "code": 204,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:50:49 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "Delete starting point",
+              "originalRequest": {
+                "header": [],
+                "method": "DELETE",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "starting-points",
+                    "1",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/starting-points/1/"
+                }
+              },
+              "status": "No Content"
+            }
+          ]
+        }
+      ],
+      "name": "Starting points"
+    },
+    {
+      "item": [
+        {
+          "name": "Create route",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{access_token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\n  \"name\": \"Говерла з Заросляка\",\n  \"description\": \"Класичний підйом на найвищу вершину України...\",\n  \"distance_km\": 12.5,\n  \"elevation_gain_m\": 1050,\n  \"difficulty\": \"medium\",\n  \"duration_type\": \"one_day\",\n  \"gear\": [\"трекінгове взуття\", \"дощовик\", \"вода 1.5 л\"],\n  \"mountain_range\": 3,\n  \"starting_point\": 1\n}"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "routes",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/routes/"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "json",
+              "body": "{\n  \"id\": 2,\n  \"name\": \"Говерла з Заросляка\",\n  \"description\": \"Класичний підйом на найвищу вершину України...\",\n  \"distance_km\": 12.5,\n  \"elevation_gain_m\": 1050,\n  \"difficulty\": \"medium\",\n  \"duration_type\": \"one_day\",\n  \"popularity\": 0,\n  \"mountain_range\": 3,\n  \"starting_point\": 1,\n  \"gear\": [\n    \"трекінгове взуття\",\n    \"дощовик\",\n    \"вода 1.5 л\"\n  ]\n}",
+              "code": 201,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:31:30 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, POST, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "379"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "Create route",
+              "originalRequest": {
+                "body": {
+                  "mode": "raw",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  },
+                  "raw": "{\n  \"name\": \"Говерла з Заросляка\",\n  \"description\": \"Класичний підйом на найвищу вершину України...\",\n  \"distance_km\": 12.5,\n  \"elevation_gain_m\": 1050,\n  \"difficulty\": \"medium\",\n  \"duration_type\": \"one_day\",\n  \"gear\": [\"трекінгове взуття\", \"дощовик\", \"вода 1.5 л\"],\n  \"mountain_range\": 3,\n  \"starting_point\": 1\n}"
+                },
+                "header": [],
+                "method": "POST",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "routes",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/routes/"
+                }
+              },
+              "status": "Created"
+            }
+          ]
+        },
+        {
+          "name": "List routes",
+          "request": {
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "routes",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/routes/"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "json",
+              "body": "[\n  {\n    \"id\": 2,\n    \"name\": \"Говерла з Заросляка\",\n    \"description\": \"Класичний підйом на найвищу вершину України...\",\n    \"distance_km\": 12.5,\n    \"elevation_gain_m\": 1050,\n    \"difficulty\": \"medium\",\n    \"duration_type\": \"one_day\",\n    \"popularity\": 0,\n    \"mountain_range\": 3,\n    \"starting_point\": 1,\n    \"gear\": [\n      \"трекінгове взуття\",\n      \"дощовик\",\n      \"вода 1.5 л\"\n    ]\n  }\n]",
+              "code": 200,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:41:37 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, POST, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "381"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "List routes",
+              "originalRequest": {
+                "header": [],
+                "method": "GET",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "routes",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/routes/"
+                }
+              },
+              "status": "OK"
+            }
+          ]
+        },
+        {
+          "name": "Get route",
+          "request": {
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "routes",
+                "2",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/routes/2/"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "json",
+              "body": "{\n  \"id\": 2,\n  \"name\": \"Говерла з Заросляка\",\n  \"description\": \"Класичний підйом на найвищу вершину України...\",\n  \"distance_km\": 12.5,\n  \"elevation_gain_m\": 1050,\n  \"difficulty\": \"medium\",\n  \"duration_type\": \"one_day\",\n  \"popularity\": 0,\n  \"mountain_range\": 3,\n  \"starting_point\": 1,\n  \"gear\": [\n    \"трекінгове взуття\",\n    \"дощовик\",\n    \"вода 1.5 л\"\n  ]\n}",
+              "code": 200,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:43:36 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "379"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "Get route",
+              "originalRequest": {
+                "header": [],
+                "method": "GET",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "routes",
+                    "2",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/routes/2/"
+                }
+              },
+              "status": "OK"
+            }
+          ]
+        },
+        {
+          "name": "Update route",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{access_token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\n  \"difficulty\": \"hard\"\n}"
+            },
+            "header": [],
+            "method": "PATCH",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "routes",
+                "2",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/routes/2/"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "json",
+              "body": "{\n  \"id\": 2,\n  \"name\": \"Говерла з Заросляка\",\n  \"description\": \"Класичний підйом на найвищу вершину України...\",\n  \"distance_km\": 12.5,\n  \"elevation_gain_m\": 1050,\n  \"difficulty\": \"hard\",\n  \"duration_type\": \"one_day\",\n  \"popularity\": 0,\n  \"mountain_range\": 3,\n  \"starting_point\": 1,\n  \"gear\": [\n    \"трекінгове взуття\",\n    \"дощовик\",\n    \"вода 1.5 л\"\n  ]\n}",
+              "code": 200,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:43:59 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "377"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "Update route",
+              "originalRequest": {
+                "body": {
+                  "mode": "raw",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  },
+                  "raw": "{\n  \"difficulty\": \"hard\"\n}"
+                },
+                "header": [],
+                "method": "PATCH",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "routes",
+                    "2",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/routes/2/"
+                }
+              },
+              "status": "OK"
+            }
+          ]
+        },
+        {
+          "name": "Delete route",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{access_token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [],
+            "method": "DELETE",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "routes",
+                "2",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/routes/2/"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "text",
+              "body": "",
+              "code": 204,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 26 Oct 2026 20:48:25 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "Delete route",
+              "originalRequest": {
+                "header": [],
+                "method": "DELETE",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "routes",
+                    "2",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/routes/2/"
+                }
+              },
+              "status": "No Content"
+            }
+          ]
+        }
+      ],
+      "name": "Routes"
+    },
+    {
+      "item": [
+        {
+          "name": "Register user",
+          "request": {
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\n  \"username\": \"pasha\",\n  \"first_name\": \"Паша\",\n  \"last_name\": \"Смирнов\",\n  \"email\": \"pasha@example.com\",\n  \"password\": \"Hiker-Pass-2027\",\n  \"password_confirmation\": \"Hiker-Pass-2027\"\n}"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "register",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/auth/register/"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "json",
+              "body": "{\n  \"id\": 3,\n  \"username\": \"pasha\",\n  \"first_name\": \"Паша\",\n  \"last_name\": \"Смирнов\",\n  \"email\": \"pasha@example.com\"\n}",
+              "code": 201,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 07 Nov 2026 16:41:41 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin"
+                },
+                {
+                  "key": "Allow",
+                  "value": "POST, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "108"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "Register user",
+              "originalRequest": {
+                "body": {
+                  "mode": "raw",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  },
+                  "raw": "{\n  \"username\": \"pasha\",\n  \"first_name\": \"Паша\",\n  \"last_name\": \"Смирнов\",\n  \"email\": \"pasha@example.com\",\n  \"password\": \"Hiker-Pass-2027\",\n  \"password_confirmation\": \"Hiker-Pass-2027\"\n}"
+                },
+                "header": [],
+                "method": "POST",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "auth",
+                    "register",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/auth/register/"
+                }
+              },
+              "status": "Created"
+            }
+          ]
+        },
+        {
+          "name": "Register - passwords mismatch",
+          "request": {
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\n  \"username\": \"daria\",\n  \"first_name\": \"Дарʼя\",\n  \"last_name\": \"Синявська\",\n  \"email\": \"daria@example.com\",\n  \"password\": \"Hiker-Pass-2027\",\n  \"password_confirmation\": \"Hiker-P-20\"\n}"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "register",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/auth/register/"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "json",
+              "body": "{\n  \"error\": \"Невалідні дані\",\n  \"details\": {\n    \"username\": [\n      \"A user with that username already exists.\"\n    ],\n    \"email\": [\n      \"Користувач з таким email вже існує\"\n    ]\n  }\n}",
+              "code": 400,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 07 Nov 2026 16:42:51 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin"
+                },
+                {
+                  "key": "Allow",
+                  "value": "POST, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "179"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "Register - passwords mismatch",
+              "originalRequest": {
+                "body": {
+                  "mode": "raw",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  },
+                  "raw": "{\n  \"username\": \"daria\",\n  \"first_name\": \"Дарʼя\",\n  \"last_name\": \"Синявська\",\n  \"email\": \"daria@example.com\",\n  \"password\": \"Hiker-Pass-2027\",\n  \"password_confirmation\": \"Hiker-P-20\"\n}"
+                },
+                "header": [],
+                "method": "POST",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "auth",
+                    "register",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/auth/register/"
+                }
+              },
+              "status": "Bad Request"
+            }
+          ]
+        },
+        {
+          "name": "Register - invalid email",
+          "request": {
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\n  \"username\": \"pasha\",\n  \"first_name\": \"Паша\",\n  \"last_name\": \"Смирнов\",\n  \"email\": \"not-an-email\",\n  \"password\": \"Hiker-Pass-2027\",\n  \"password_confirmation\": \"Hiker-Pass-2027\"\n}"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "register",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/auth/register/"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "json",
+              "body": "{\n  \"error\": \"Невалідні дані\",\n  \"details\": {\n    \"username\": [\n      \"A user with that username already exists.\"\n    ],\n    \"email\": [\n      \"Enter a valid email address.\"\n    ]\n  }\n}",
+              "code": 400,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 07 Nov 2026 16:45:52 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin"
+                },
+                {
+                  "key": "Allow",
+                  "value": "POST, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "149"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "Register - invalid email",
+              "originalRequest": {
+                "body": {
+                  "mode": "raw",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  },
+                  "raw": "{\n  \"username\": \"pasha\",\n  \"first_name\": \"Паша\",\n  \"last_name\": \"Смирнов\",\n  \"email\": \"not-an-email\",\n  \"password\": \"Hiker-Pass-2027\",\n  \"password_confirmation\": \"Hiker-Pass-2027\"\n}"
+                },
+                "header": [],
+                "method": "POST",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "auth",
+                    "register",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/auth/register/"
+                }
+              },
+              "status": "Bad Request"
+            }
+          ]
+        },
+        {
+          "name": "Register - weak password",
+          "request": {
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\n  \"username\": \"masha\",\n  \"first_name\": \"Маша\",\n  \"last_name\": \"Смирнов\",\n  \"email\": \"pas@example.com\",\n  \"password\": \"12345678\",\n  \"password_confirmation\": \"12345678\"\n}"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "register",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/auth/register/"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "json",
+              "body": "{\n  \"error\": \"Невалідні дані\",\n  \"details\": {\n    \"password\": [\n      \"This password is too common.\",\n      \"This password is entirely numeric.\"\n    ]\n  }\n}",
+              "code": 400,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 07 Nov 2026 16:46:46 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin"
+                },
+                {
+                  "key": "Allow",
+                  "value": "POST, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "132"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "Register - weak password",
+              "originalRequest": {
+                "body": {
+                  "mode": "raw",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  },
+                  "raw": "{\n  \"username\": \"masha\",\n  \"first_name\": \"Маша\",\n  \"last_name\": \"Смирнов\",\n  \"email\": \"pas@example.com\",\n  \"password\": \"12345678\",\n  \"password_confirmation\": \"12345678\"\n}"
+                },
+                "header": [],
+                "method": "POST",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "auth",
+                    "register",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/auth/register/"
+                }
+              },
+              "status": "Bad Request"
+            }
+          ]
+        },
+        {
+          "name": "Register - duplicate user",
+          "request": {
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\n  \"username\": \"pasha\",\n  \"first_name\": \"Паша\",\n  \"last_name\": \"Смирнов\",\n  \"email\": \"pasha@example.com\",\n  \"password\": \"Hiker-Pass-2027\",\n  \"password_confirmation\": \"Hiker-Pass-2027\"\n}"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "register",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/auth/register/"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "json",
+              "body": "{\n  \"error\": \"Невалідні дані\",\n  \"details\": {\n    \"username\": [\n      \"A user with that username already exists.\"\n    ],\n    \"email\": [\n      \"Користувач з таким email вже існує\"\n    ]\n  }\n}",
+              "code": 400,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 07 Nov 2026 16:56:36 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin"
+                },
+                {
+                  "key": "Allow",
+                  "value": "POST, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "179"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "Register - duplicate user",
+              "originalRequest": {
+                "body": {
+                  "mode": "raw",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  },
+                  "raw": "{\n  \"username\": \"pasha\",\n  \"first_name\": \"Паша\",\n  \"last_name\": \"Смирнов\",\n  \"email\": \"pasha@example.com\",\n  \"password\": \"Hiker-Pass-2027\",\n  \"password_confirmation\": \"Hiker-Pass-2027\"\n}"
+                },
+                "header": [],
+                "method": "POST",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "auth",
+                    "register",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/auth/register/"
+                }
+              },
+              "status": "Bad Request"
+            }
+          ]
+        },
+        {
+          "name": "Register - empty body",
+          "request": {
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{}"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "register",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/auth/register/"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "json",
+              "body": "{\n  \"error\": \"Невалідні дані\",\n  \"details\": {\n    \"username\": [\n      \"This field is required.\"\n    ],\n    \"email\": [\n      \"This field is required.\"\n    ],\n    \"password\": [\n      \"This field is required.\"\n    ],\n    \"password_confirmation\": [\n      \"This field is required.\"\n    ]\n  }\n}",
+              "code": 400,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 07 Nov 2026 16:57:36 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin"
+                },
+                {
+                  "key": "Allow",
+                  "value": "POST, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "217"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "Register - empty body",
+              "originalRequest": {
+                "body": {
+                  "mode": "raw",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  },
+                  "raw": "{}"
+                },
+                "header": [],
+                "method": "POST",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "auth",
+                    "register",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/auth/register/"
+                }
+              },
+              "status": "Bad Request"
+            }
+          ]
+        },
+        {
+          "name": "Login",
+          "request": {
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\n  \"username\": \"daria\",\n  \"password\": \"Hiker-Pass-2027\"\n}"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "login",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/auth/login/"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "json",
+              "body": "{\n  \"refresh\": \"{{vault:json_web_token_084c}}\",\n  \"access\": \"{{vault:json_web_token_02ue}}\"\n}",
+              "code": 200,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 07 Nov 2026 17:13:14 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin"
+                },
+                {
+                  "key": "Allow",
+                  "value": "POST, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "489"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "Login",
+              "originalRequest": {
+                "body": {
+                  "mode": "raw",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  },
+                  "raw": "{\n  \"username\": \"daria\",\n  \"password\": \"Hiker-Pass-2027\"\n}"
+                },
+                "header": [],
+                "method": "POST",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "auth",
+                    "login",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/auth/login/"
+                }
+              },
+              "status": "OK"
+            },
+            {
+              "_postman_previewlanguage": "json",
+              "body": "{\n  \"refresh\": \"{{vault:json_web_token_0x2i}}\",\n  \"access\": \"{{vault:json_web_token_0x5g}}\"\n}",
+              "code": 200,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 09 Nov 2026 19:53:42 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin"
+                },
+                {
+                  "key": "Allow",
+                  "value": "POST, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "489"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "admin login",
+              "originalRequest": {
+                "body": {
+                  "mode": "raw",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  },
+                  "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"17032018\"\n}"
+                },
+                "header": [],
+                "method": "POST",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "auth",
+                    "login",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/auth/login/"
+                }
+              },
+              "status": "OK"
+            }
+          ]
+        },
+        {
+          "name": "Login - wrong password",
+          "request": {
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\n  \"username\": \"daria\",\n  \"password\": \"wrong-password\"\n}"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "login",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/auth/login/"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "json",
+              "body": "{\n  \"detail\": \"No active account found with the given credentials\"\n}",
+              "code": 401,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 07 Nov 2026 17:14:27 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "WWW-Authenticate",
+                  "value": "Bearer realm=\"api\""
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin"
+                },
+                {
+                  "key": "Allow",
+                  "value": "POST, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "63"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "Login - wrong password",
+              "originalRequest": {
+                "body": {
+                  "mode": "raw",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  },
+                  "raw": "{\n  \"username\": \"daria\",\n  \"password\": \"wrong-password\"\n}"
+                },
+                "header": [],
+                "method": "POST",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "auth",
+                    "login",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/auth/login/"
+                }
+              },
+              "status": "Unauthorized"
+            }
+          ]
+        },
+        {
+          "name": "Refresh token",
+          "request": {
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\n  \"refresh\": \"{{json_web_token_084c}}\"\n}"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "refresh",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/auth/refresh/"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "json",
+              "body": "{\n  \"access\": \"{{vault:json_web_token_04az}}\"\n}",
+              "code": 200,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 07 Nov 2026 17:15:44 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin"
+                },
+                {
+                  "key": "Allow",
+                  "value": "POST, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "244"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "Refresh token",
+              "originalRequest": {
+                "body": {
+                  "mode": "raw",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  },
+                  "raw": "{\n  \"refresh\": \"{{json_web_token_084c}}\"\n}"
+                },
+                "header": [],
+                "method": "POST",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "auth",
+                    "refresh",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/auth/refresh/"
+                }
+              },
+              "status": "OK"
+            }
+          ]
+        },
+        {
+          "name": "Refresh token - invalid",
+          "request": {
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\n  \"refresh\": \"not-a-real-token\"\n}"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "refresh",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/auth/refresh/"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "json",
+              "body": "{\n  \"detail\": \"Token is invalid\",\n  \"code\": \"token_not_valid\"\n}",
+              "code": 401,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 07 Nov 2026 17:17:00 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "WWW-Authenticate",
+                  "value": "Bearer realm=\"api\""
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin"
+                },
+                {
+                  "key": "Allow",
+                  "value": "POST, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "54"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "Refresh token - invalid",
+              "originalRequest": {
+                "body": {
+                  "mode": "raw",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  },
+                  "raw": "{\n  \"refresh\": \"not-a-real-token\"\n}"
+                },
+                "header": [],
+                "method": "POST",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "auth",
+                    "refresh",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/auth/refresh/"
+                }
+              },
+              "status": "Unauthorized"
+            }
+          ]
+        },
+        {
+          "name": "creata w no token",
+          "request": {
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\n    \"id\": 3,\n    \"name\": \"Чорногора\",\n    \"description\": \"Найвищий гірський масив Українських Карпат...\"\n  }"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "mountain-ranges",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/mountain-ranges/"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get current user",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{access_token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "me",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/users/me/"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "json",
+              "body": "{\n  \"id\": 2,\n  \"username\": \"daria\",\n  \"first_name\": \"Дарʼя\",\n  \"last_name\": \"Синявська\",\n  \"email\": \"daria@example.com\",\n  \"is_staff\": false\n}",
+              "code": 200,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 08 Nov 2026 23:08:21 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "131"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "Get current user",
+              "originalRequest": {
+                "header": [],
+                "method": "GET",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "users",
+                    "me",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/users/me/"
+                }
+              },
+              "status": "OK"
+            }
+          ]
+        },
+        {
+          "name": "Get current user - no token",
+          "request": {
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "me",
+                ""
+              ],
+              "raw": "{{base_url}}/api/v1/users/me/"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "json",
+              "body": "{\n  \"error\": \"Потрібна авторизація. Увійдіть в акаунт і передайте access токен у заголовку Authorization: Bearer <token>\"\n}",
+              "code": 401,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 08 Nov 2026 23:09:14 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.12.9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "WWW-Authenticate",
+                  "value": "Bearer realm=\"api\""
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, origin"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "177"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "name": "Get current user - no token",
+              "originalRequest": {
+                "header": [],
+                "method": "GET",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "users",
+                    "me",
+                    ""
+                  ],
+                  "raw": "{{base_url}}/api/v1/users/me/"
+                }
+              },
+              "status": "Unauthorized"
+            }
+          ]
+        }
+      ],
+      "name": "Auth"
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": ""
+    },
+    {
+      "key": "access_token",
+      "secret": true
+    }
+  ]
+}
