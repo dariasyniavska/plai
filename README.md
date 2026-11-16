@@ -21,8 +21,6 @@
 
 ## Як запустити проєкт
 
-Для локального запуску бекенду виконайте наступні кроки у терміналі:
-
 1. Створіть та активуйте віртуальне середовище:
 
    ```bash
@@ -30,31 +28,95 @@
    source .venv/bin/activate
    ```
 
-2. Встановіть необхідні залежності:
+2. Встановіть залежності (разом із тестовими інструментами та drf-spectacular):
 
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Застосуйте міграції бази даних:
+3. Налаштуйте змінні середовища. Створіть файл `.env` на основі прикладу і заповніть значення:
+
+   ```bash
+   cp .env.example .env
+   ```
+
+   | Змінна | Опис | Приклад |
+   |---|---|---|
+   | `SECRET_KEY` | Секретний ключ Django (обов'язкова, без неї проєкт не запуститься) | довгий випадковий рядок |
+   | `DEBUG` | Режим налагодження | `True` для локальної розробки |
+   | `ALLOWED_HOSTS` | Дозволені хости через кому | `127.0.0.1,localhost` |
+   | `CORS_ALLOW_ALL_ORIGINS` | Дозволити запити з будь-якого origin | `True` для локальної розробки |
+
+   Згенерувати `SECRET_KEY`:
+
+   ```bash
+   python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
+   ```
+
+   Файл `.env` додано в `.gitignore`, не комітьте його.
+
+4. Застосуйте міграції бази даних:
 
    ```bash
    python manage.py migrate
    ```
 
-4. Створіть адміністратора (потрібен для створення, редагування й видалення даних):
+5. Створіть адміністратора (потрібен для створення, редагування й видалення даних):
 
    ```bash
    python manage.py createsuperuser
    ```
 
-5. Запустіть сервер:
+6. Запустіть сервер:
 
    ```bash
    python manage.py runserver
    ```
 
 Бекенд працюватиме за адресою: http://127.0.0.1:8000/.
+
+## Тестування
+
+Тести написані на pytest (з pytest-django) і лежать у папці `tests/`. Для кожного запуску створюється окрема тестова база, дані розробки не зачіпаються. Перед запуском має існувати файл `.env` (див. розділ «Як запустити проєкт», крок 3).
+
+```bash
+python -m pytest
+```
+
+Покриття коду тестами (coverage.py):
+
+```bash
+coverage run -m pytest
+coverage report -m
+coverage html
+```
+
+Звіт `coverage html` відкривається у файлі `htmlcov/index.html`.
+
+## Документація API
+
+Документація згенерована автоматично за допомогою drf-spectacular (OpenAPI 3).
+
+- Swagger UI: http://127.0.0.1:8000/api/docs/
+- OpenAPI-схема (YAML): http://127.0.0.1:8000/api/schema/
+
+Отримати схему у файл:
+
+```bash
+python manage.py spectacular --file schema.yml
+```
+
+Щоб випробувати захищені ендпоінти в Swagger UI: виконайте `POST /api/v1/auth/login/`, скопіюйте значення `access`, натисніть кнопку **Authorize** і вставте токен (без слова `Bearer`).
+
+## Логування
+
+Логи пишуться в консоль і у файл `logs/app.log` (файл у `.gitignore`). Паролі й токени в логи не потрапляють.
+
+| Рівень | Що логується |
+|---|---|
+| `DEBUG` | Читання даних (списки, деталі, профіль) |
+| `INFO` | Успішні зміни: реєстрація, створення, оновлення, видалення |
+| `WARNING` | Помилки валідації, неіснуючі обʼєкти, конфлікти видалення, відмови в доступі (401, 403) |
 
 ## Ендпоінти
 
@@ -84,7 +146,7 @@ Authorization: Bearer <access_token>
 {
   "error": "Невалідні дані",
   "details": {
-    "name": ["Це поле обов'язкове."]
+    "name": ["This field is required."]
   }
 }
 ```
@@ -145,6 +207,7 @@ Authorization: Bearer <access_token>
     "elevation_gain_m": 1050,
     "difficulty": "medium",
     "duration_type": "one_day",
+    "popularity": 0,
     "mountain_range": 1,
     "starting_point": 1,
     "gear": ["трекінгове взуття", "дощовик", "вода 1.5 л"]
@@ -173,6 +236,7 @@ Authorization: Bearer <access_token>
   "elevation_gain_m": 1050,
   "difficulty": "medium",
   "duration_type": "one_day",
+  "popularity": 0,
   "mountain_range": 1,
   "starting_point": 1,
   "gear": ["трекінгове взуття", "дощовик", "вода 1.5 л"]
@@ -183,7 +247,7 @@ Authorization: Bearer <access_token>
 
 #### Створити маршрут
 
-**Опис:** Додає новий маршрут.
+**Опис:** Додає новий маршрут. Поле `popularity` необов'язкове (за замовчуванням `0`, допустимі значення від 0 до 10).
 
 **Метод:** `POST /api/v1/routes/`
 
@@ -640,6 +704,8 @@ Authorization: Bearer <access_token>
   "is_staff": false
 }
 ```
+
+**Помилки:** `401`.
 
 #### Редагувати свій профіль
 
