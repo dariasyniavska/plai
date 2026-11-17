@@ -1,0 +1,9 @@
+[run]
+source =
+    config
+    routes
+    users
+omit =
+    */migrations/*
+    config/asgi.py
+    config/wsgi.py
